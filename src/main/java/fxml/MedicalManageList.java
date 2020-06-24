@@ -1,8 +1,6 @@
 package fxml;
 
-import de.felixroske.jfxsupport.FXMLController;
 import dfcontrol.OptionTag;
-import entity.view.User;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -18,9 +16,6 @@ import org.controlsfx.glyphfont.Glyph;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import service.view.UserMapper;
-import service.view.impl.UserService;
 
 import java.awt.*;
 import java.io.IOException;
@@ -37,7 +32,7 @@ import static utils.ComUtil.*;
  * @Date 2020-06-22 16:55
  * @Version 1.0
  */
-@FXMLController
+
 public class MedicalManageList extends VBox implements Initializable {
 
     private static final Logger logger = LoggerFactory.getLogger(MedicalManageList.class);
@@ -93,16 +88,15 @@ public class MedicalManageList extends VBox implements Initializable {
         });
     }
 
-    @Autowired
-    UserMapper userMapper;
 
     String loginName = "王二";
     String passWord = "123";
 
     @FXML
     public void toSearch(){
-        List<User> userInfo = userMapper.getusers();
-        System.out.println("spring-mybatis成功，输出：" + userInfo);
+        System.out.println("spring-mybatis成功，输出：" );
+
+
     }
 
     @Override

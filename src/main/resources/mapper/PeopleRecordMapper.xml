@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.PeopleRecordMapper" >
+  <resultMap id="BaseResultMap" type="entity.view.PeopleRecord" >
+    <result column="uid" property="uid" jdbcType="VARCHAR" />
+    <result column="pID" property="pid" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="createName" property="createname" jdbcType="VARCHAR" />
+    <result column="updateTime" property="updatetime" jdbcType="VARCHAR" />
+    <result column="updateName" property="updatename" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="delflg" property="delflg" jdbcType="INTEGER" />
+    <result column="resDate" property="resdate" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="mainSuit" property="mainsuit" jdbcType="VARCHAR" />
+    <result column="perSuit" property="persuit" jdbcType="VARCHAR" />
+    <result column="pasSuit" property="passuit" jdbcType="VARCHAR" />
+    <result column="menSuit" property="mensuit" jdbcType="VARCHAR" />
+    <result column="marSuit" property="marsuit" jdbcType="VARCHAR" />
+    <result column="famSuit" property="famsuit" jdbcType="VARCHAR" />
+    <result column="diagSuit" property="diagsuit" jdbcType="VARCHAR" />
+    <result column="docSuit" property="docsuit" jdbcType="VARCHAR" />
+    <result column="cycleExplain" property="cycleexplain" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="entity.view.PeopleRecord" >
+    insert into people_record (uid, pID, createTime, 
+      createName, updateTime, updateName, 
+      ip, delflg, resDate, 
+      status, mainSuit, perSuit, 
+      pasSuit, menSuit, marSuit, 
+      famSuit, diagSuit, docSuit, 
+      cycleExplain)
+    values (#{uid,jdbcType=VARCHAR}, #{pid,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR}, 
+      #{createname,jdbcType=VARCHAR}, #{updatetime,jdbcType=VARCHAR}, #{updatename,jdbcType=VARCHAR}, 
+      #{ip,jdbcType=VARCHAR}, #{delflg,jdbcType=INTEGER}, #{resdate,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{mainsuit,jdbcType=VARCHAR}, #{persuit,jdbcType=VARCHAR}, 
+      #{passuit,jdbcType=VARCHAR}, #{mensuit,jdbcType=VARCHAR}, #{marsuit,jdbcType=VARCHAR}, 
+      #{famsuit,jdbcType=VARCHAR}, #{diagsuit,jdbcType=VARCHAR}, #{docsuit,jdbcType=VARCHAR}, 
+      #{cycleexplain,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.view.PeopleRecord" >
+    insert into people_record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="pid != null" >
+        pID,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="createname != null" >
+        createName,
+      </if>
+      <if test="updatetime != null" >
+        updateTime,
+      </if>
+      <if test="updatename != null" >
+        updateName,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="delflg != null" >
+        delflg,
+      </if>
+      <if test="resdate != null" >
+        resDate,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="mainsuit != null" >
+        mainSuit,
+      </if>
+      <if test="persuit != null" >
+        perSuit,
+      </if>
+      <if test="passuit != null" >
+        pasSuit,
+      </if>
+      <if test="mensuit != null" >
+        menSuit,
+      </if>
+      <if test="marsuit != null" >
+        marSuit,
+      </if>
+      <if test="famsuit != null" >
+        famSuit,
+      </if>
+      <if test="diagsuit != null" >
+        diagSuit,
+      </if>
+      <if test="docsuit != null" >
+        docSuit,
+      </if>
+      <if test="cycleexplain != null" >
+        cycleExplain,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        #{uid,jdbcType=VARCHAR},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="createname != null" >
+        #{createname,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatename != null" >
+        #{updatename,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="delflg != null" >
+        #{delflg,jdbcType=INTEGER},
+      </if>
+      <if test="resdate != null" >
+        #{resdate,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="mainsuit != null" >
+        #{mainsuit,jdbcType=VARCHAR},
+      </if>
+      <if test="persuit != null" >
+        #{persuit,jdbcType=VARCHAR},
+      </if>
+      <if test="passuit != null" >
+        #{passuit,jdbcType=VARCHAR},
+      </if>
+      <if test="mensuit != null" >
+        #{mensuit,jdbcType=VARCHAR},
+      </if>
+      <if test="marsuit != null" >
+        #{marsuit,jdbcType=VARCHAR},
+      </if>
+      <if test="famsuit != null" >
+        #{famsuit,jdbcType=VARCHAR},
+      </if>
+      <if test="diagsuit != null" >
+        #{diagsuit,jdbcType=VARCHAR},
+      </if>
+      <if test="docsuit != null" >
+        #{docsuit,jdbcType=VARCHAR},
+      </if>
+      <if test="cycleexplain != null" >
+        #{cycleexplain,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

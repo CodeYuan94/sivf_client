@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.PatInfMapper" >
+  <resultMap id="BaseResultMap" type="entity.view.PatInf" >
+    <result column="uid" property="uid" jdbcType="VARCHAR" />
+    <result column="pID" property="pid" jdbcType="VARCHAR" />
+    <result column="createName" property="createname" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="updateTime" property="updatetime" jdbcType="VARCHAR" />
+    <result column="updateName" property="updatename" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="hospitalCard" property="hospitalcard" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="nation" property="nation" jdbcType="VARCHAR" />
+    <result column="usedName" property="usedname" jdbcType="VARCHAR" />
+    <result column="nameabbrev" property="nameabbrev" jdbcType="VARCHAR" />
+    <result column="IDNumber" property="idnumber" jdbcType="VARCHAR" />
+    <result column="officerNumber" property="officernumber" jdbcType="VARCHAR" />
+    <result column="passportNumber" property="passportnumber" jdbcType="VARCHAR" />
+    <result column="HongKongAndMacauPassportNumber" property="hongkongandmacaupassportnumber" jdbcType="VARCHAR" />
+    <result column="nativeplace" property="nativeplace" jdbcType="VARCHAR" />
+    <result column="birthDate" property="birthdate" jdbcType="VARCHAR" />
+    <result column="education" property="education" jdbcType="VARCHAR" />
+    <result column="occupation" property="occupation" jdbcType="VARCHAR" />
+    <result column="QQ" property="qq" jdbcType="VARCHAR" />
+    <result column="weixin" property="weixin" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="socialSecurityNum" property="socialsecuritynum" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="liveaddress" property="liveaddress" jdbcType="VARCHAR" />
+    <result column="familyRelation" property="familyrelation" jdbcType="VARCHAR" />
+    <result column="annualHouseIncome" property="annualhouseincome" jdbcType="VARCHAR" />
+    <result column="religionToggle" property="religiontoggle" jdbcType="VARCHAR" />
+    <result column="religion" property="religion" jdbcType="VARCHAR" />
+    <result column="detailedaddress" property="detailedaddress" jdbcType="VARCHAR" />
+    <result column="explain" property="explain" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="delflg" property="delflg" jdbcType="INTEGER" />
+    <result column="workUnit" property="workunit" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    uid, pID, createName,
+      createTime, updateTime, updateName,
+      name, hospitalCard, sex,
+      nation, usedName, nameabbrev,
+      IDNumber, officerNumber, passportNumber,
+      HongKongAndMacauPassportNumber, nativeplace,
+      birthDate, education, occupation,
+      QQ, weixin, phone,
+      socialSecurityNum, address, liveaddress,
+      familyRelation, annualHouseIncome, religionToggle,
+      religion, detailedaddress, explain,
+      ip, delflg, workUnit
+  </sql>
+  <insert id="insert" parameterType="entity.view.PatInf" >
+    insert into pat_inf (uid, pID, createName,
+      createTime, updateTime, updateName,
+      name, hospitalCard, sex,
+      nation, usedName, nameabbrev,
+      IDNumber, officerNumber, passportNumber,
+      HongKongAndMacauPassportNumber, nativeplace,
+      birthDate, education, occupation,
+      QQ, weixin, phone,
+      socialSecurityNum, address, liveaddress,
+      familyRelation, annualHouseIncome, religionToggle,
+      religion, detailedaddress, explain,
+      ip, delflg, workUnit
+      )
+    values (#{uid,jdbcType=VARCHAR}, #{pid,jdbcType=VARCHAR}, #{createname,jdbcType=VARCHAR},
+      #{createtime,jdbcType=VARCHAR}, #{updatetime,jdbcType=VARCHAR}, #{updatename,jdbcType=VARCHAR},
+      #{name,jdbcType=VARCHAR}, #{hospitalcard,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR},
+      #{nation,jdbcType=VARCHAR}, #{usedname,jdbcType=VARCHAR}, #{nameabbrev,jdbcType=VARCHAR},
+      #{idnumber,jdbcType=VARCHAR}, #{officernumber,jdbcType=VARCHAR}, #{passportnumber,jdbcType=VARCHAR},
+      #{hongkongandmacaupassportnumber,jdbcType=VARCHAR}, #{nativeplace,jdbcType=VARCHAR},
+      #{birthdate,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{occupation,jdbcType=VARCHAR},
+      #{qq,jdbcType=VARCHAR}, #{weixin,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
+      #{socialsecuritynum,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{liveaddress,jdbcType=VARCHAR},
+      #{familyrelation,jdbcType=VARCHAR}, #{annualhouseincome,jdbcType=VARCHAR}, #{religiontoggle,jdbcType=VARCHAR},
+      #{religion,jdbcType=VARCHAR}, #{detailedaddress,jdbcType=VARCHAR}, #{explain,jdbcType=VARCHAR},
+      #{ip,jdbcType=VARCHAR}, #{delflg,jdbcType=INTEGER}, #{workunit,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="entity.view.PatInf" >
+    insert into pat_inf
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="pid != null" >
+        pID,
+      </if>
+      <if test="createname != null" >
+        createName,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="updatetime != null" >
+        updateTime,
+      </if>
+      <if test="updatename != null" >
+        updateName,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="hospitalcard != null" >
+        hospitalCard,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="nation != null" >
+        nation,
+      </if>
+      <if test="usedname != null" >
+        usedName,
+      </if>
+      <if test="nameabbrev != null" >
+        nameabbrev,
+      </if>
+      <if test="idnumber != null" >
+        IDNumber,
+      </if>
+      <if test="officernumber != null" >
+        officerNumber,
+      </if>
+      <if test="passportnumber != null" >
+        passportNumber,
+      </if>
+      <if test="hongkongandmacaupassportnumber != null" >
+        HongKongAndMacauPassportNumber,
+      </if>
+      <if test="nativeplace != null" >
+        nativeplace,
+      </if>
+      <if test="birthdate != null" >
+        birthDate,
+      </if>
+      <if test="education != null" >
+        education,
+      </if>
+      <if test="occupation != null" >
+        occupation,
+      </if>
+      <if test="qq != null" >
+        QQ,
+      </if>
+      <if test="weixin != null" >
+        weixin,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="socialsecuritynum != null" >
+        socialSecurityNum,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="liveaddress != null" >
+        liveaddress,
+      </if>
+      <if test="familyrelation != null" >
+        familyRelation,
+      </if>
+      <if test="annualhouseincome != null" >
+        annualHouseIncome,
+      </if>
+      <if test="religiontoggle != null" >
+        religionToggle,
+      </if>
+      <if test="religion != null" >
+        religion,
+      </if>
+      <if test="detailedaddress != null" >
+        detailedaddress,
+      </if>
+      <if test="explain != null" >
+        explain,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="delflg != null" >
+        delflg,
+      </if>
+      <if test="workunit != null" >
+        workUnit,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        #{uid,jdbcType=VARCHAR},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=VARCHAR},
+      </if>
+      <if test="createname != null" >
+        #{createname,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatename != null" >
+        #{updatename,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalcard != null" >
+        #{hospitalcard,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null" >
+        #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="usedname != null" >
+        #{usedname,jdbcType=VARCHAR},
+      </if>
+      <if test="nameabbrev != null" >
+        #{nameabbrev,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="officernumber != null" >
+        #{officernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="passportnumber != null" >
+        #{passportnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="hongkongandmacaupassportnumber != null" >
+        #{hongkongandmacaupassportnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace != null" >
+        #{nativeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="occupation != null" >
+        #{occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="weixin != null" >
+        #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritynum != null" >
+        #{socialsecuritynum,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="liveaddress != null" >
+        #{liveaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="familyrelation != null" >
+        #{familyrelation,jdbcType=VARCHAR},
+      </if>
+      <if test="annualhouseincome != null" >
+        #{annualhouseincome,jdbcType=VARCHAR},
+      </if>
+      <if test="religiontoggle != null" >
+        #{religiontoggle,jdbcType=VARCHAR},
+      </if>
+      <if test="religion != null" >
+        #{religion,jdbcType=VARCHAR},
+      </if>
+      <if test="detailedaddress != null" >
+        #{detailedaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="explain != null" >
+        #{explain,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="delflg != null" >
+        #{delflg,jdbcType=INTEGER},
+      </if>
+      <if test="workunit != null" >
+        #{workunit,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from pat_inf
+  </select>
+</mapper>
