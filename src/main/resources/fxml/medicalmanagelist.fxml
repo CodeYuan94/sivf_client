@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.controlsfx.glyphfont.Glyph?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="VBox" alignment="CENTER_LEFT" stylesheets="@../css/sivf.css"
+         fx:id="listRoot" style="-fx-background-color: white"
+         xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+        <HBox alignment="CENTER_LEFT" fillHeight="false">
+            <children>
+                <Button fx:id="searchBtn" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#toSearch"
+                        style="-fx-background-color: white; -fx-border-color: transparent;" text="搜索" textFill="#b2b2b2" HBox.hgrow="ALWAYS">
+                    <graphic>
+                        <Glyph fx:id="searchTag" fontFamily="FontAwesome" icon="SEARCH">
+                        </Glyph>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+        <Separator />
+        <HBox fx:id="cycleCondition" alignment="CENTER" spacing="15.0">
+            <VBox.margin>
+                <Insets bottom="15.0" top="15.0" />
+            </VBox.margin>
+        </HBox>
+
+        <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox spacing="5.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_LEFT">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="待就诊">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Text>
+                                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Text fx:id="noSeeNum" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Text>
+                                        <Label text="人">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="18.0" right="18.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <TreeView fx:id="noSeeTree" prefHeight="0.0" showRoot="false" style="-fx-border-color: white;" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_LEFT">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="已操作">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Text>
+                                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Text fx:id="seeNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Text>
+                                        <Label text="人">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="18.0" right="18.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <TreeView fx:id="seeTree" prefHeight="0.0" showRoot="false" style="-fx-border-color: white;" VBox.vgrow="ALWAYS">
+
+                        </TreeView>
+                    </children>
+                </VBox>
+
+            </children>
+        </VBox>
+</fx:root>
+

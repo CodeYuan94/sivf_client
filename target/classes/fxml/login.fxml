@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import dfcontrol.Tray?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import dfcontrol.SubmitButton?>
+<Pane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fxml.Login" fx:id="loginRoot"
+      prefHeight="458.0" prefWidth="750.0">
+    <StackPane alignment="TOP_LEFT">
+        <HBox alignment="CENTER" prefWidth="750.0">
+            <ImageView fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../img/loginbg.png" />
+                </image>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                <VBox alignment="CENTER" spacing="22.0" VBox.vgrow="ALWAYS">
+                    <HBox alignment="CENTER">
+                        <Label text="欢迎您登录">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <padding>
+                            <Insets bottom="23.0" />
+                        </padding>
+                    </HBox>
+                    <VBox alignment="CENTER" spacing="10.0">
+                        <VBox alignment="CENTER" spacing="22.0">
+                            <children>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <TextField fx:id="username" prefHeight="40.0" prefWidth="319.0" promptText="请输入账号" style="-fx-border-color: #8DA9FF; -fx-background-radius: 4px; -fx-border-radius: 4px;">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <StackPane alignment="CENTER_RIGHT">
+                                            <children>
+                                                <PasswordField fx:id="password" prefHeight="40.0" prefWidth="319.0" promptText="请输入密码" style="-fx-border-color: #8DA9FF; -fx-background-radius: 4; -fx-border-radius: 4;">
+                                                    <font>
+                                                        <Font name="Symbol" size="15.0" />
+                                                    </font>
+                                                </PasswordField>
+                                                <TextField fx:id="passwordText" prefHeight="40.0" prefWidth="319.0" promptText="请输入密码" style="-fx-border-color: #8DA9FF; -fx-background-radius: 4; -fx-border-radius: 4;">
+                                                    <font>
+                                                        <Font name="Symbol" size="15.0" />
+                                                    </font>
+                                                </TextField>
+                                                <ImageView fx:id="seePsdView" fitHeight="12.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../img/noeye.png" />
+                                                    </image>
+                                                    <StackPane.margin>
+                                                        <Insets right="10.0" />
+                                                    </StackPane.margin>
+                                                </ImageView>
+                                            </children>
+                                        </StackPane>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" maxWidth="319.0" prefWidth="319.0">
+                            <children>
+                                <Text fx:id="tip" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="6.0">
+                        <children>
+                            <VBox alignment="CENTER" spacing="18.0">
+                                <children>
+                                    <HBox alignment="CENTER">
+                                        <children>
+                                            <SubmitButton onAction="#toLogin" mnemonicParsing="false" prefHeight="40.0" prefWidth="319.0" name="登录">
+                                                <font>
+                                                    <Font size="16.0" />
+                                                </font>
+                                            </SubmitButton>
+                                        </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" maxWidth="319.0" prefWidth="319.0">
+                                        <children>
+                                            <Text fx:id="findPsd" fill="#86a4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="忘记密码">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </VBox>
+                        </children>
+                    </VBox>
+                </VBox>
+            </VBox>
+        </HBox>
+        <Tray fx:id="tray" maxHeight="36.0" prefHeight="36.0" />
+
+    </StackPane>
+</Pane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<fx:root alignment="CENTER_LEFT" type="HBox"
+         xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="5.0">
+            <children>
+                <Label fx:id="name">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox  alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+            <children>
+                <Label fx:id="treatStage">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT" disable="true" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" visible="false">
+                    <children>
+                        <Label fx:id="pid"/>
+                        <Label fx:id="sex" />
+                        <Label fx:id="age" />
+                        <Label fx:id="phone" />
+                        <Label fx:id="hosCard" />
+                        <Label fx:id="operated"/>
+                    </children>
+                </HBox>
+            </children>
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </HBox>
+    </children>
+</fx:root>
+

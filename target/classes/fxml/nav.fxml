@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<fx:root type="HBox" alignment="CENTER_LEFT" stylesheets="@../css/sivf.css"
+         xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!--最左侧按钮控制栏列-->
+        <VBox fx:id="funcRow" alignment="TOP_CENTER" spacing="19.0" style="-fx-background-color: rgb(73,73,83,1);">
+            <children>
+                <StackPane rotate="-90.0" translateX="-1.0">
+                    <children>
+                        <Group>
+                            <children>
+                                <ToggleButton fx:id="funcTag" mnemonicParsing="false" style="-fx-background-color: transparent;" text="功能" textFill="WHITE">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </ToggleButton>
+                            </children>
+                        </Group>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </StackPane>
+            </children>
+        </VBox>
+
+        <!--详细按钮列-->
+        <VBox fx:id="optionRow" style="-fx-background-color: #5B5B5B">
+            <children>
+                <VBox fx:id="optionList" alignment="TOP_CENTER" spacing="7.0" />
+            </children>
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </VBox>
+
+    </children>
+</fx:root>
+

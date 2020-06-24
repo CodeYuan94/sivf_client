@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import fxml.Menu?>
+<!--<?import component.Navigation?>-->
+<!--<?import component.Content?>-->
+<!--<?import component.Footer?>-->
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<?import dfcontrol.Tray?>
+
+<?import fxml.Nav?>
+<?import fxml.Content?>
+<AnchorPane stylesheets="@../css/sivf.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fxml.Home">
+    <children>
+        <StackPane fx:id="outerPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox fx:id="homePane">
+                    <children>
+                        <Menu />
+                        <HBox VBox.vgrow="ALWAYS">
+                            <children>
+                                <Nav/>
+                                <Content HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+<!--                        <Footer />-->
+                    </children>
+                </VBox>
+                <VBox fx:id="maskLayer" style="-fx-background-color: black;-fx-opacity: 0.3"/>
+                <VBox fx:id="popScene" alignment="CENTER" fillWidth="false">
+                    <children>
+                        <StackPane alignment="TOP_CENTER" style="-fx-background-color: white">
+                            <children>
+                                <HBox fx:id="popContent" alignment="CENTER"/>
+                                <Tray fx:id="tray" maxHeight="25.0" prefHeight="25.0"/>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+
+    </children>
+</AnchorPane>

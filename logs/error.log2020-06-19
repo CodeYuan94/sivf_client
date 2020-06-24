@@ -1,0 +1,50 @@
+2020-6-19 13:54:21[ERROR](UserInfoEdit.java:118) save avatar file false
+2020-6-19 15:32:50[ERROR](UserInfoEdit.java:118) save avatar file false
+2020-6-19 16:28:24[ERROR](Login.java:82) error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:29:18[ERROR](Login.java:82) error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:30:01[ERROR](Login.java:82) error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:31:15[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:33:07[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:33:24[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:53:52[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:54:00[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:56:16[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:56:53[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 16:58:56[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml:18
+
+2020-6-19 17:14:11[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml
+
+2020-6-19 17:15:09[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml
+
+2020-6-19 17:16:05[ERROR](Login.java:82) toLogin() error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/home.fxml
+
+2020-6-19 17:18:03[ERROR](Menu.java:44) error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/menu.fxml
+
+2020-6-19 17:19:22[ERROR](Menu.java:44) error occur :javafx.fxml.LoadException: 
+/Users/heyi/iCloud%20%e4%ba%91%e7%9b%98%ef%bc%88%e5%bd%92%e6%a1%a3%ef%bc%89/Desktop/work/%e5%b7%a5%e7%a8%8b/SIVF/target/classes/fxml/menu.fxml
+

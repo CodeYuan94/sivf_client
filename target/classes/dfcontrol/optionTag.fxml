@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="optionRoot" alignment="BOTTOM_CENTER" spacing="3.0" type="VBox"
+         xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="optionImg" pickOnBounds="true" preserveRatio="true" />
+        <Text fx:id="itemText" fill="#999999" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Text>
+    </children>
+</fx:root>

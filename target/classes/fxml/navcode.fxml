@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="VBox" fx:id="navRoot" alignment="TOP_CENTER" spacing="3.0"
+         xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="nodeImg" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+        </ImageView>
+        <HBox alignment="CENTER">
+            <children>
+                <Label fx:id="navTitle" textFill="#FFFAFA">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <Separator fx:id="navSep" maxHeight="1.0" minHeight="1.0" opacity="0.5" prefHeight="1.0">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin></Separator>
+    </children>
+</fx:root>
