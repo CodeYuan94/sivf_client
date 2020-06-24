@@ -301,5 +301,12 @@
     select
     <include refid="Base_Column_List"></include>
     from pat_inf
+    where delflg = 0
+  </select>
+  <select id="selectByName" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from pat_inf
+    where name like '%'||#{name}||'%' and delflg = 0
   </select>
 </mapper>

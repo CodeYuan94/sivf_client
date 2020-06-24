@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @author yuan
  * @project SIVF
- * @description TODO
+ * @description 患者信息dao实现
  * @date 2020/6/23 15:38
  **/
 @Repository
@@ -30,8 +30,18 @@ public class PatInfMapperImpl extends BaseDao implements PatInfMapper {
         return 0;
     }
 
+    /**
+     * 查询所有患者信息
+     * @return
+     */
     @Override
     public List<PatInf> selectAll() {
         return this.getSqlSession().selectList("selectAll");
     }
+
+    @Override
+    public List<PatInf> selectByName(String name) {
+        return this.getSqlSession().selectList(url+"selectByName",name);
+    }
+
 }

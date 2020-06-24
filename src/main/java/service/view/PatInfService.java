@@ -13,4 +13,6 @@ import java.util.List;
 public interface PatInfService {
 
     List<PatInf> queryAllPat();
+
+    List<PatInf> queryLikeName(String name);
 }

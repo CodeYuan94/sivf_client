@@ -1,6 +1,9 @@
 package fxml;
 
+import dao.impl.PatInfMapperImpl;
+import dfcontrol.ListNode;
 import dfcontrol.OptionTag;
+import entity.view.PatInf;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -8,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -16,6 +20,7 @@ import org.controlsfx.glyphfont.Glyph;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import utils.ApplicationUtil;
 
 import java.awt.*;
 import java.io.IOException;
@@ -36,6 +41,8 @@ import static utils.ComUtil.*;
 public class MedicalManageList extends VBox implements Initializable {
 
     private static final Logger logger = LoggerFactory.getLogger(MedicalManageList.class);
+
+    private PatInfMapperImpl patInfMapperImpl = (PatInfMapperImpl)ApplicationUtil.getApplicationXML().getBean("patInfMapperImpl");
 
     public MedicalManageList(){
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/medicalmanagelist.fxml"));
@@ -89,6 +96,7 @@ public class MedicalManageList extends VBox implements Initializable {
     }
 
 
+
     String loginName = "王二";
     String passWord = "123";
 
@@ -96,6 +104,11 @@ public class MedicalManageList extends VBox implements Initializable {
     public void toSearch(){
         System.out.println("spring-mybatis成功，输出：" );
 
+        List<PatInf> patInfs = patInfMapperImpl.selectAll();
+
+        for (PatInf patInf : patInfs) {
+            System.out.println("患者信息："+patInf);
+        }
 
     }
 

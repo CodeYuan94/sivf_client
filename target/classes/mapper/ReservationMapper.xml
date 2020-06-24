@@ -21,6 +21,14 @@
     <result column="sorts" property="sorts" jdbcType="INTEGER" />
     <result column="godoctor" property="godoctor" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="BaseColumnList">
+    uid, pID, ip,
+      delflg, createName, createTime,
+      updateName, updateTime, treatStage,
+      phone, reservationDate, reservationProject,
+      reservationType, groups, nood,
+      reservationDoctors, sorts, godoctor
+  </sql>
   <insert id="insert" parameterType="entity.view.Reservation" >
     insert into reservation (uid, pID, ip, 
       delflg, createName, createTime, 
@@ -152,4 +160,12 @@
       </if>
     </trim>
   </insert>
+  <select id="selectToday" resultMap="BaseResultMap">
+    select
+    <include refid="BaseColumnList"></include>
+    from
+    reservation
+    where
+    reservationDate = date('now') and delflg = 0
+  </select>
 </mapper>

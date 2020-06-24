@@ -10,4 +10,6 @@ public interface PatInfMapper {
     int insertSelective(PatInf record);
 
     List<PatInf> selectAll();
+
+    List<PatInf> selectByName(String name);
 }
