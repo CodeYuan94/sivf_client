@@ -131,6 +131,47 @@ public class PatInf {
         return hospitalcard;
     }
 
+    @Override
+    public String toString() {
+        return "PatInf{" +
+                "uid='" + uid + '\'' +
+                ", pid='" + pid + '\'' +
+                ", createname='" + createname + '\'' +
+                ", createtime='" + createtime + '\'' +
+                ", updatetime='" + updatetime + '\'' +
+                ", updatename='" + updatename + '\'' +
+                ", name='" + name + '\'' +
+                ", hospitalcard='" + hospitalcard + '\'' +
+                ", sex='" + sex + '\'' +
+                ", nation='" + nation + '\'' +
+                ", usedname='" + usedname + '\'' +
+                ", nameabbrev='" + nameabbrev + '\'' +
+                ", idnumber='" + idnumber + '\'' +
+                ", officernumber='" + officernumber + '\'' +
+                ", passportnumber='" + passportnumber + '\'' +
+                ", hongkongandmacaupassportnumber='" + hongkongandmacaupassportnumber + '\'' +
+                ", nativeplace='" + nativeplace + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", education='" + education + '\'' +
+                ", occupation='" + occupation + '\'' +
+                ", qq='" + qq + '\'' +
+                ", weixin='" + weixin + '\'' +
+                ", phone='" + phone + '\'' +
+                ", socialsecuritynum='" + socialsecuritynum + '\'' +
+                ", address='" + address + '\'' +
+                ", liveaddress='" + liveaddress + '\'' +
+                ", familyrelation='" + familyrelation + '\'' +
+                ", annualhouseincome='" + annualhouseincome + '\'' +
+                ", religiontoggle='" + religiontoggle + '\'' +
+                ", religion='" + religion + '\'' +
+                ", detailedaddress='" + detailedaddress + '\'' +
+                ", explain='" + explain + '\'' +
+                ", ip='" + ip + '\'' +
+                ", delflg=" + delflg +
+                ", workunit='" + workunit + '\'' +
+                '}';
+    }
+
     public void setHospitalcard(String hospitalcard) {
         this.hospitalcard = hospitalcard;
     }

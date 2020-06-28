@@ -1,0 +1,27 @@
+2020.06.28 09:42:27,139 +0800 [94245] WARN  ThreadPoolAsynchronousRunner - com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@7d2ac533 -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+2020.06.28 09:42:27,145 +0800 [94251] WARN  ThreadPoolAsynchronousRunner - com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@7d2ac533 -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@539f7153
+			on thread: C3P0PooledConnectionPoolManager[identityToken->1hge166aa1wz1g8w1vs1fut|42e3ede4]-HelperThread-#0
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@704fa5d7
+			on thread: C3P0PooledConnectionPoolManager[identityToken->1hge166aa1wz1g8w1vs1fut|42e3ede4]-HelperThread-#2
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2d29dac3
+			on thread: C3P0PooledConnectionPoolManager[identityToken->1hge166aa1wz1g8w1vs1fut|42e3ede4]-HelperThread-#1
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@194bc3c0
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@31f63c53
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@3c9a56a7
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@5f867c35
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1894e1c6
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@18805223
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@76c110fa
+Pool thread stack traces:
+	Thread[C3P0PooledConnectionPoolManager[identityToken->1hge166aa1wz1g8w1vs1fut|42e3ede4]-HelperThread-#0,5,main]
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:722)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->1hge166aa1wz1g8w1vs1fut|42e3ede4]-HelperThread-#2,5,main]
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:722)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->1hge166aa1wz1g8w1vs1fut|42e3ede4]-HelperThread-#1,5,main]
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:722)
+

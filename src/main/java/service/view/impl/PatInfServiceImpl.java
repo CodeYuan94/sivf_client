@@ -9,6 +9,7 @@ import utils.CharacterUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author yuan
@@ -31,12 +32,15 @@ public class PatInfServiceImpl implements PatInfService {
     public List<PatInf> queryLikeName(String name) {
         // 所有患者信息
         List<PatInf> patInfs = new ArrayList<>();
-        // 匹配中文的患者
-        List<PatInf> patInfs1 = patInfMapper.selectByName(name);
+
         // 全部患者
         List<PatInf> patInfsAll = patInfMapper.selectAll();
-        patInfsAll.stream().forEach(e->e.setName(CharacterUtil.getPingYin(e.getName())));
-        // TODO
-        return null;
+        if (!CharacterUtil.isChinese(name)) {
+            patInfs = patInfsAll.stream().filter(e -> name.equals(CharacterUtil.getFirstSpell(e.getName())))
+                    .collect(Collectors.toList());
+        } else {
+            patInfs = patInfMapper.selectByName(name);
+        }
+        return patInfs;
     }
 }
