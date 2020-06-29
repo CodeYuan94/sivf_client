@@ -2,6 +2,8 @@ package service.view.impl;
 
 import dao.PatInfMapper;
 import entity.view.PatInf;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.view.PatInfService;
@@ -20,6 +22,8 @@ import java.util.stream.Collectors;
 @Service
 public class PatInfServiceImpl implements PatInfService {
 
+    public static final Logger logger = LoggerFactory.getLogger(PatInfServiceImpl.class);
+
     @Autowired
     private PatInfMapper patInfMapper;
 
@@ -28,6 +32,11 @@ public class PatInfServiceImpl implements PatInfService {
         return patInfMapper.selectAll();
     }
 
+    /**
+     * 通过名字模糊查询 和 拼音首字母查询
+     * @param name
+     * @return
+     */
     @Override
     public List<PatInf> queryLikeName(String name) {
         // 所有患者信息
@@ -42,5 +51,22 @@ public class PatInfServiceImpl implements PatInfService {
             patInfs = patInfMapper.selectByName(name);
         }
         return patInfs;
+    }
+
+    /**
+     * 通过pid查询患者信息
+     * @param pid
+     * @return
+     */
+    @Override
+    public PatInf queryByPid(String pid) {
+        // TODO
+        return patInfMapper.selectByPid(pid);
+    }
+
+    @Override
+    public int savePat(PatInf patInf) {
+        // TODO
+        return 0;
     }
 }

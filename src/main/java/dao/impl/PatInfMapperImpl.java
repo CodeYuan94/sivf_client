@@ -32,6 +32,7 @@ public class PatInfMapperImpl extends BaseDao implements PatInfMapper {
 
     /**
      * 查询所有患者信息
+     *
      * @return
      */
     @Override
@@ -39,9 +40,40 @@ public class PatInfMapperImpl extends BaseDao implements PatInfMapper {
         return this.getSqlSession().selectList("selectAll");
     }
 
+    /**
+     * 通过名字模糊查询患者
+     *
+     * @param name
+     * @return
+     */
     @Override
     public List<PatInf> selectByName(String name) {
-        return this.getSqlSession().selectList(url+"selectByName",name);
+        return this.getSqlSession().selectList(url + "selectByName", name);
     }
 
+    /**
+     * 通过pid查询患者
+     * @param pid
+     * @return
+     */
+    @Override
+    public PatInf selectByPid(String pid) {
+        return this.getSqlSession().selectOne(url+"selectByPid", pid);
+    }
+
+    /**
+     * 更新患者信息
+     *
+     * @param record
+     * @return
+     */
+    @Override
+    public int updateSelective(PatInf record) {
+        if (record == null) {
+            return -1;
+        } else {
+            return this.getSqlSession().update(url + "updateByPrimaryKeySelective", record);
+        }
+
+    }
 }

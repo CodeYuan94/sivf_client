@@ -41,7 +41,7 @@
                             </filters>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>Main</mainClass>
+                                    <mainClass>SivfRun</mainClass>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.handlers</resource>
@@ -70,7 +70,7 @@
                             <outfile>${project.build.directory}/sivf.exe</outfile>
                             <downloadUrl>http://java.com/download</downloadUrl>
                             <classPath>
-                                <mainClass>Main</mainClass>
+                                <mainClass>SivfRun</mainClass>
                                 <preCp>anything</preCp>
                             </classPath>
                             <!--<icon>sivf.ico</icon>-->
@@ -113,6 +113,7 @@
                 <executions>
                     <execution>
                         <id>Generate MyBatis Artifacts</id>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>

@@ -5,6 +5,8 @@ public class PatInf {
 
     private String pid;
 
+    private String coupleid;
+
     private String createname;
 
     private String createtime;
@@ -23,7 +25,7 @@ public class PatInf {
 
     private String usedname;
 
-    private String nameabbrev;
+    private String nameabbreviation;
 
     private String idnumber;
 
@@ -33,9 +35,13 @@ public class PatInf {
 
     private String hongkongandmacaupassportnumber;
 
-    private String nativeplace;
+    private String nativeplace1;
+
+    private String nativeplace2;
 
     private String birthdate;
+
+    private Integer age;
 
     private String education;
 
@@ -47,11 +53,27 @@ public class PatInf {
 
     private String phone;
 
+    private String spousephone;
+
+    private String kin1;
+
+    private String telnum1;
+
+    private String kin2;
+
+    private String telnum2;
+
+    private String province;
+
+    private String city;
+
+    private String area;
+
+    private String residence;
+
+    private String detailedaddress;
+
     private String socialsecuritynum;
-
-    private String address;
-
-    private String liveaddress;
 
     private String familyrelation;
 
@@ -60,8 +82,6 @@ public class PatInf {
     private String religiontoggle;
 
     private String religion;
-
-    private String detailedaddress;
 
     private String explain;
 
@@ -85,6 +105,14 @@ public class PatInf {
 
     public void setPid(String pid) {
         this.pid = pid;
+    }
+
+    public String getCoupleid() {
+        return coupleid;
+    }
+
+    public void setCoupleid(String coupleid) {
+        this.coupleid = coupleid;
     }
 
     public String getCreatename() {
@@ -131,47 +159,6 @@ public class PatInf {
         return hospitalcard;
     }
 
-    @Override
-    public String toString() {
-        return "PatInf{" +
-                "uid='" + uid + '\'' +
-                ", pid='" + pid + '\'' +
-                ", createname='" + createname + '\'' +
-                ", createtime='" + createtime + '\'' +
-                ", updatetime='" + updatetime + '\'' +
-                ", updatename='" + updatename + '\'' +
-                ", name='" + name + '\'' +
-                ", hospitalcard='" + hospitalcard + '\'' +
-                ", sex='" + sex + '\'' +
-                ", nation='" + nation + '\'' +
-                ", usedname='" + usedname + '\'' +
-                ", nameabbrev='" + nameabbrev + '\'' +
-                ", idnumber='" + idnumber + '\'' +
-                ", officernumber='" + officernumber + '\'' +
-                ", passportnumber='" + passportnumber + '\'' +
-                ", hongkongandmacaupassportnumber='" + hongkongandmacaupassportnumber + '\'' +
-                ", nativeplace='" + nativeplace + '\'' +
-                ", birthdate='" + birthdate + '\'' +
-                ", education='" + education + '\'' +
-                ", occupation='" + occupation + '\'' +
-                ", qq='" + qq + '\'' +
-                ", weixin='" + weixin + '\'' +
-                ", phone='" + phone + '\'' +
-                ", socialsecuritynum='" + socialsecuritynum + '\'' +
-                ", address='" + address + '\'' +
-                ", liveaddress='" + liveaddress + '\'' +
-                ", familyrelation='" + familyrelation + '\'' +
-                ", annualhouseincome='" + annualhouseincome + '\'' +
-                ", religiontoggle='" + religiontoggle + '\'' +
-                ", religion='" + religion + '\'' +
-                ", detailedaddress='" + detailedaddress + '\'' +
-                ", explain='" + explain + '\'' +
-                ", ip='" + ip + '\'' +
-                ", delflg=" + delflg +
-                ", workunit='" + workunit + '\'' +
-                '}';
-    }
-
     public void setHospitalcard(String hospitalcard) {
         this.hospitalcard = hospitalcard;
     }
@@ -200,12 +187,12 @@ public class PatInf {
         this.usedname = usedname;
     }
 
-    public String getNameabbrev() {
-        return nameabbrev;
+    public String getNameabbreviation() {
+        return nameabbreviation;
     }
 
-    public void setNameabbrev(String nameabbrev) {
-        this.nameabbrev = nameabbrev;
+    public void setNameabbreviation(String nameabbreviation) {
+        this.nameabbreviation = nameabbreviation;
     }
 
     public String getIdnumber() {
@@ -240,12 +227,20 @@ public class PatInf {
         this.hongkongandmacaupassportnumber = hongkongandmacaupassportnumber;
     }
 
-    public String getNativeplace() {
-        return nativeplace;
+    public String getNativeplace1() {
+        return nativeplace1;
     }
 
-    public void setNativeplace(String nativeplace) {
-        this.nativeplace = nativeplace;
+    public void setNativeplace1(String nativeplace1) {
+        this.nativeplace1 = nativeplace1;
+    }
+
+    public String getNativeplace2() {
+        return nativeplace2;
+    }
+
+    public void setNativeplace2(String nativeplace2) {
+        this.nativeplace2 = nativeplace2;
     }
 
     public String getBirthdate() {
@@ -254,6 +249,14 @@ public class PatInf {
 
     public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public String getEducation() {
@@ -296,28 +299,92 @@ public class PatInf {
         this.phone = phone;
     }
 
+    public String getSpousephone() {
+        return spousephone;
+    }
+
+    public void setSpousephone(String spousephone) {
+        this.spousephone = spousephone;
+    }
+
+    public String getKin1() {
+        return kin1;
+    }
+
+    public void setKin1(String kin1) {
+        this.kin1 = kin1;
+    }
+
+    public String getTelnum1() {
+        return telnum1;
+    }
+
+    public void setTelnum1(String telnum1) {
+        this.telnum1 = telnum1;
+    }
+
+    public String getKin2() {
+        return kin2;
+    }
+
+    public void setKin2(String kin2) {
+        this.kin2 = kin2;
+    }
+
+    public String getTelnum2() {
+        return telnum2;
+    }
+
+    public void setTelnum2(String telnum2) {
+        this.telnum2 = telnum2;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getResidence() {
+        return residence;
+    }
+
+    public void setResidence(String residence) {
+        this.residence = residence;
+    }
+
+    public String getDetailedaddress() {
+        return detailedaddress;
+    }
+
+    public void setDetailedaddress(String detailedaddress) {
+        this.detailedaddress = detailedaddress;
+    }
+
     public String getSocialsecuritynum() {
         return socialsecuritynum;
     }
 
     public void setSocialsecuritynum(String socialsecuritynum) {
         this.socialsecuritynum = socialsecuritynum;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getLiveaddress() {
-        return liveaddress;
-    }
-
-    public void setLiveaddress(String liveaddress) {
-        this.liveaddress = liveaddress;
     }
 
     public String getFamilyrelation() {
@@ -350,14 +417,6 @@ public class PatInf {
 
     public void setReligion(String religion) {
         this.religion = religion;
-    }
-
-    public String getDetailedaddress() {
-        return detailedaddress;
-    }
-
-    public void setDetailedaddress(String detailedaddress) {
-        this.detailedaddress = detailedaddress;
     }
 
     public String getExplain() {

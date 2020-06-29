@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sivf1">
+    <output-path>$PROJECT_DIR$/out/artifacts/sivf1</output-path>
+    <root id="archive" name="sivf1.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/service/view/impl/PatInfServiceImpl.java" />
+    </root>
+  </artifact>
+</component>

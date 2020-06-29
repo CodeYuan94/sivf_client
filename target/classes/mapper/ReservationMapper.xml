@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="dao.ReservationMapper" >
-  <resultMap id="BaseResultMap" type="entity.view.Reservation" >
-    <result column="uid" property="uid" jdbcType="VARCHAR" />
-    <result column="pID" property="pid" jdbcType="VARCHAR" />
-    <result column="ip" property="ip" jdbcType="VARCHAR" />
-    <result column="delflg" property="delflg" jdbcType="INTEGER" />
-    <result column="createName" property="createname" jdbcType="VARCHAR" />
-    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
-    <result column="updateName" property="updatename" jdbcType="VARCHAR" />
-    <result column="updateTime" property="updatetime" jdbcType="VARCHAR" />
-    <result column="treatStage" property="treatstage" jdbcType="VARCHAR" />
-    <result column="phone" property="phone" jdbcType="VARCHAR" />
-    <result column="reservationDate" property="reservationdate" jdbcType="VARCHAR" />
-    <result column="reservationProject" property="reservationproject" jdbcType="VARCHAR" />
-    <result column="reservationType" property="reservationtype" jdbcType="VARCHAR" />
-    <result column="groups" property="groups" jdbcType="VARCHAR" />
-    <result column="nood" property="nood" jdbcType="VARCHAR" />
-    <result column="reservationDoctors" property="reservationdoctors" jdbcType="VARCHAR" />
-    <result column="sorts" property="sorts" jdbcType="INTEGER" />
-    <result column="godoctor" property="godoctor" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ReservationMapper">
+  <resultMap id="BaseResultMap" type="entity.view.Reservation">
+    <result column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="pID" jdbcType="VARCHAR" property="pid" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="delflg" jdbcType="INTEGER" property="delflg" />
+    <result column="createName" jdbcType="VARCHAR" property="createname" />
+    <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+    <result column="updateName" jdbcType="VARCHAR" property="updatename" />
+    <result column="updateTime" jdbcType="VARCHAR" property="updatetime" />
+    <result column="treatStage" jdbcType="VARCHAR" property="treatstage" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="reservationDate" jdbcType="VARCHAR" property="reservationdate" />
+    <result column="reservationProject" jdbcType="VARCHAR" property="reservationproject" />
+    <result column="reservationType" jdbcType="VARCHAR" property="reservationtype" />
+    <result column="groups" jdbcType="VARCHAR" property="groups" />
+    <result column="nood" jdbcType="VARCHAR" property="nood" />
+    <result column="reservationDoctors" jdbcType="VARCHAR" property="reservationdoctors" />
+    <result column="sorts" jdbcType="INTEGER" property="sorts" />
+    <result column="godoctor" jdbcType="VARCHAR" property="godoctor" />
   </resultMap>
   <sql id="BaseColumnList">
     uid, pID, ip,
@@ -29,7 +29,7 @@
       reservationType, groups, nood,
       reservationDoctors, sorts, godoctor
   </sql>
-  <insert id="insert" parameterType="entity.view.Reservation" >
+  <insert id="insert" parameterType="entity.view.Reservation">
     insert into reservation (uid, pID, ip, 
       delflg, createName, createTime, 
       updateName, updateTime, treatStage, 
@@ -45,124 +45,124 @@
       #{reservationdoctors,jdbcType=VARCHAR}, #{sorts,jdbcType=INTEGER}, #{godoctor,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="entity.view.Reservation" >
+  <insert id="insertSelective" parameterType="entity.view.Reservation">
     insert into reservation
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="uid != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
         uid,
       </if>
-      <if test="pid != null" >
+      <if test="pid != null">
         pID,
       </if>
-      <if test="ip != null" >
+      <if test="ip != null">
         ip,
       </if>
-      <if test="delflg != null" >
+      <if test="delflg != null">
         delflg,
       </if>
-      <if test="createname != null" >
+      <if test="createname != null">
         createName,
       </if>
-      <if test="createtime != null" >
+      <if test="createtime != null">
         createTime,
       </if>
-      <if test="updatename != null" >
+      <if test="updatename != null">
         updateName,
       </if>
-      <if test="updatetime != null" >
+      <if test="updatetime != null">
         updateTime,
       </if>
-      <if test="treatstage != null" >
+      <if test="treatstage != null">
         treatStage,
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         phone,
       </if>
-      <if test="reservationdate != null" >
+      <if test="reservationdate != null">
         reservationDate,
       </if>
-      <if test="reservationproject != null" >
+      <if test="reservationproject != null">
         reservationProject,
       </if>
-      <if test="reservationtype != null" >
+      <if test="reservationtype != null">
         reservationType,
       </if>
-      <if test="groups != null" >
+      <if test="groups != null">
         groups,
       </if>
-      <if test="nood != null" >
+      <if test="nood != null">
         nood,
       </if>
-      <if test="reservationdoctors != null" >
+      <if test="reservationdoctors != null">
         reservationDoctors,
       </if>
-      <if test="sorts != null" >
+      <if test="sorts != null">
         sorts,
       </if>
-      <if test="godoctor != null" >
+      <if test="godoctor != null">
         godoctor,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="uid != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
         #{uid,jdbcType=VARCHAR},
       </if>
-      <if test="pid != null" >
+      <if test="pid != null">
         #{pid,jdbcType=VARCHAR},
       </if>
-      <if test="ip != null" >
+      <if test="ip != null">
         #{ip,jdbcType=VARCHAR},
       </if>
-      <if test="delflg != null" >
+      <if test="delflg != null">
         #{delflg,jdbcType=INTEGER},
       </if>
-      <if test="createname != null" >
+      <if test="createname != null">
         #{createname,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null" >
+      <if test="createtime != null">
         #{createtime,jdbcType=VARCHAR},
       </if>
-      <if test="updatename != null" >
+      <if test="updatename != null">
         #{updatename,jdbcType=VARCHAR},
       </if>
-      <if test="updatetime != null" >
+      <if test="updatetime != null">
         #{updatetime,jdbcType=VARCHAR},
       </if>
-      <if test="treatstage != null" >
+      <if test="treatstage != null">
         #{treatstage,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="reservationdate != null" >
+      <if test="reservationdate != null">
         #{reservationdate,jdbcType=VARCHAR},
       </if>
-      <if test="reservationproject != null" >
+      <if test="reservationproject != null">
         #{reservationproject,jdbcType=VARCHAR},
       </if>
-      <if test="reservationtype != null" >
+      <if test="reservationtype != null">
         #{reservationtype,jdbcType=VARCHAR},
       </if>
-      <if test="groups != null" >
+      <if test="groups != null">
         #{groups,jdbcType=VARCHAR},
       </if>
-      <if test="nood != null" >
+      <if test="nood != null">
         #{nood,jdbcType=VARCHAR},
       </if>
-      <if test="reservationdoctors != null" >
+      <if test="reservationdoctors != null">
         #{reservationdoctors,jdbcType=VARCHAR},
       </if>
-      <if test="sorts != null" >
+      <if test="sorts != null">
         #{sorts,jdbcType=INTEGER},
       </if>
-      <if test="godoctor != null" >
+      <if test="godoctor != null">
         #{godoctor,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
   <select id="selectToday" resultMap="BaseResultMap">
     select
-    <include refid="BaseColumnList"></include>
+    <include refid="BaseColumnList" />
     from
     reservation
     where

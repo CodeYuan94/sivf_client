@@ -1,4 +1,3 @@
-import dao.PatInfMapper;
 import dao.ReservationMapper;
 import entity.view.PatInf;
 import entity.view.Reservation;
@@ -61,17 +60,17 @@ public class sivfTest {
 
     @Test
     public void testChar() {
-        boolean z = CharacterUtil.isChinese("张aa");
-        System.out.println(z);
-        String z1 = CharacterUtil.getChinese("asd为rrr好");
-        System.out.println(z1);
-//        String spell = CharacterUtil.getFirstSpell("孙悟空");
-//        System.out.println("首字母："+spell);
-//        String pingYin = CharacterUtil.getPingYin("孙悟空");
-//        System.out.println("拼音："+pingYin);
-//        String fullSpell = CharacterUtil.getFullSpell("孙悟空");
-//        System.out.println("首字母大写的拼音："+fullSpell);
-//        String capitalize = CharacterUtil.capitalize("abcde");
-//        System.out.println("首字母大写："+capitalize);
+//        boolean z = CharacterUtil.isChinese("张aa");
+//        System.out.println(z);
+//        String z1 = CharacterUtil.getChinese("asd为rrr好");
+//        System.out.println(z1);
+        String spell = CharacterUtil.getFirstSpell("孙悟空");
+        System.out.println("首字母："+spell);
+        String pingYin = CharacterUtil.getPingYin("孙悟空");
+        System.out.println("拼音："+pingYin);
+        String fullSpell = CharacterUtil.getFullSpell("孙悟空");
+        System.out.println("首字母大写的拼音："+fullSpell);
+        String capitalize = CharacterUtil.capitalize("abcde");
+        System.out.println("首字母大写："+capitalize);
     }
 }

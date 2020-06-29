@@ -15,4 +15,8 @@ public interface PatInfService {
     List<PatInf> queryAllPat();
 
     List<PatInf> queryLikeName(String name);
+
+    PatInf queryByPid(String pid);
+
+    int savePat(PatInf patInf);
 }

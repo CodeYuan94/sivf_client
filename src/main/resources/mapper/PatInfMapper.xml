@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="entity.view.PatInf" >
     <result column="uid" property="uid" jdbcType="VARCHAR" />
     <result column="pID" property="pid" jdbcType="VARCHAR" />
+    <result column="coupleID" property="coupleid" jdbcType="VARCHAR" />
     <result column="createName" property="createname" jdbcType="VARCHAR" />
     <result column="createTime" property="createtime" jdbcType="VARCHAR" />
     <result column="updateTime" property="updatetime" jdbcType="VARCHAR" />
@@ -13,72 +14,91 @@
     <result column="sex" property="sex" jdbcType="VARCHAR" />
     <result column="nation" property="nation" jdbcType="VARCHAR" />
     <result column="usedName" property="usedname" jdbcType="VARCHAR" />
-    <result column="nameabbrev" property="nameabbrev" jdbcType="VARCHAR" />
+    <result column="nameAbbreviation" property="nameabbreviation" jdbcType="VARCHAR" />
     <result column="IDNumber" property="idnumber" jdbcType="VARCHAR" />
     <result column="officerNumber" property="officernumber" jdbcType="VARCHAR" />
     <result column="passportNumber" property="passportnumber" jdbcType="VARCHAR" />
     <result column="HongKongAndMacauPassportNumber" property="hongkongandmacaupassportnumber" jdbcType="VARCHAR" />
-    <result column="nativeplace" property="nativeplace" jdbcType="VARCHAR" />
+    <result column="nativeplace1" property="nativeplace1" jdbcType="VARCHAR" />
+    <result column="nativeplace2" property="nativeplace2" jdbcType="VARCHAR" />
     <result column="birthDate" property="birthdate" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
     <result column="education" property="education" jdbcType="VARCHAR" />
     <result column="occupation" property="occupation" jdbcType="VARCHAR" />
     <result column="QQ" property="qq" jdbcType="VARCHAR" />
     <result column="weixin" property="weixin" jdbcType="VARCHAR" />
     <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="spousePhone" property="spousephone" jdbcType="VARCHAR" />
+    <result column="kin1" property="kin1" jdbcType="VARCHAR" />
+    <result column="telNum1" property="telnum1" jdbcType="VARCHAR" />
+    <result column="kin2" property="kin2" jdbcType="VARCHAR" />
+    <result column="telNum2" property="telnum2" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="residence" property="residence" jdbcType="VARCHAR" />
+    <result column="detailedAddress" property="detailedaddress" jdbcType="VARCHAR" />
     <result column="socialSecurityNum" property="socialsecuritynum" jdbcType="VARCHAR" />
-    <result column="address" property="address" jdbcType="VARCHAR" />
-    <result column="liveaddress" property="liveaddress" jdbcType="VARCHAR" />
     <result column="familyRelation" property="familyrelation" jdbcType="VARCHAR" />
     <result column="annualHouseIncome" property="annualhouseincome" jdbcType="VARCHAR" />
     <result column="religionToggle" property="religiontoggle" jdbcType="VARCHAR" />
     <result column="religion" property="religion" jdbcType="VARCHAR" />
-    <result column="detailedaddress" property="detailedaddress" jdbcType="VARCHAR" />
     <result column="explain" property="explain" jdbcType="VARCHAR" />
     <result column="ip" property="ip" jdbcType="VARCHAR" />
     <result column="delflg" property="delflg" jdbcType="INTEGER" />
     <result column="workUnit" property="workunit" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List">
-    uid, pID, createName,
-      createTime, updateTime, updateName,
-      name, hospitalCard, sex,
-      nation, usedName, nameabbrev,
-      IDNumber, officerNumber, passportNumber,
-      HongKongAndMacauPassportNumber, nativeplace,
-      birthDate, education, occupation,
+    uid, pID, coupleID,
+      createName, createTime, updateTime,
+      updateName, name, hospitalCard,
+      sex, nation, usedName,
+      nameAbbreviation, IDNumber, officerNumber,
+      passportNumber, HongKongAndMacauPassportNumber,
+      nativeplace1, nativeplace2, birthDate,
+      age, education, occupation,
       QQ, weixin, phone,
-      socialSecurityNum, address, liveaddress,
-      familyRelation, annualHouseIncome, religionToggle,
-      religion, detailedaddress, explain,
-      ip, delflg, workUnit
+      spousePhone, kin1, telNum1,
+      kin2, telNum2, province,
+      city, area, residence,
+      detailedAddress, socialSecurityNum, familyRelation,
+      annualHouseIncome, religionToggle, religion,
+      explain, ip, delflg,
+      workUnit
   </sql>
   <insert id="insert" parameterType="entity.view.PatInf" >
-    insert into pat_inf (uid, pID, createName,
-      createTime, updateTime, updateName,
-      name, hospitalCard, sex,
-      nation, usedName, nameabbrev,
-      IDNumber, officerNumber, passportNumber,
-      HongKongAndMacauPassportNumber, nativeplace,
-      birthDate, education, occupation,
-      QQ, weixin, phone,
-      socialSecurityNum, address, liveaddress,
-      familyRelation, annualHouseIncome, religionToggle,
-      religion, detailedaddress, explain,
-      ip, delflg, workUnit
-      )
-    values (#{uid,jdbcType=VARCHAR}, #{pid,jdbcType=VARCHAR}, #{createname,jdbcType=VARCHAR},
-      #{createtime,jdbcType=VARCHAR}, #{updatetime,jdbcType=VARCHAR}, #{updatename,jdbcType=VARCHAR},
-      #{name,jdbcType=VARCHAR}, #{hospitalcard,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR},
-      #{nation,jdbcType=VARCHAR}, #{usedname,jdbcType=VARCHAR}, #{nameabbrev,jdbcType=VARCHAR},
-      #{idnumber,jdbcType=VARCHAR}, #{officernumber,jdbcType=VARCHAR}, #{passportnumber,jdbcType=VARCHAR},
-      #{hongkongandmacaupassportnumber,jdbcType=VARCHAR}, #{nativeplace,jdbcType=VARCHAR},
-      #{birthdate,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{occupation,jdbcType=VARCHAR},
-      #{qq,jdbcType=VARCHAR}, #{weixin,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
-      #{socialsecuritynum,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{liveaddress,jdbcType=VARCHAR},
-      #{familyrelation,jdbcType=VARCHAR}, #{annualhouseincome,jdbcType=VARCHAR}, #{religiontoggle,jdbcType=VARCHAR},
-      #{religion,jdbcType=VARCHAR}, #{detailedaddress,jdbcType=VARCHAR}, #{explain,jdbcType=VARCHAR},
-      #{ip,jdbcType=VARCHAR}, #{delflg,jdbcType=INTEGER}, #{workunit,jdbcType=VARCHAR}
-      )
+    insert into pat_inf (uid, pID, coupleID, 
+      createName, createTime, updateTime, 
+      updateName, name, hospitalCard, 
+      sex, nation, usedName, 
+      nameAbbreviation, IDNumber, officerNumber, 
+      passportNumber, HongKongAndMacauPassportNumber, 
+      nativeplace1, nativeplace2, birthDate, 
+      age, education, occupation, 
+      QQ, weixin, phone, 
+      spousePhone, kin1, telNum1, 
+      kin2, telNum2, province, 
+      city, area, residence, 
+      detailedAddress, socialSecurityNum, familyRelation, 
+      annualHouseIncome, religionToggle, religion, 
+      explain, ip, delflg, 
+      workUnit)
+    values (#{uid,jdbcType=VARCHAR}, #{pid,jdbcType=VARCHAR}, #{coupleid,jdbcType=VARCHAR}, 
+      #{createname,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR}, #{updatetime,jdbcType=VARCHAR}, 
+      #{updatename,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{hospitalcard,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, #{usedname,jdbcType=VARCHAR}, 
+      #{nameabbreviation,jdbcType=VARCHAR}, #{idnumber,jdbcType=VARCHAR}, #{officernumber,jdbcType=VARCHAR}, 
+      #{passportnumber,jdbcType=VARCHAR}, #{hongkongandmacaupassportnumber,jdbcType=VARCHAR}, 
+      #{nativeplace1,jdbcType=VARCHAR}, #{nativeplace2,jdbcType=VARCHAR}, #{birthdate,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{education,jdbcType=VARCHAR}, #{occupation,jdbcType=VARCHAR}, 
+      #{qq,jdbcType=VARCHAR}, #{weixin,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{spousephone,jdbcType=VARCHAR}, #{kin1,jdbcType=VARCHAR}, #{telnum1,jdbcType=VARCHAR}, 
+      #{kin2,jdbcType=VARCHAR}, #{telnum2,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{residence,jdbcType=VARCHAR}, 
+      #{detailedaddress,jdbcType=VARCHAR}, #{socialsecuritynum,jdbcType=VARCHAR}, #{familyrelation,jdbcType=VARCHAR}, 
+      #{annualhouseincome,jdbcType=VARCHAR}, #{religiontoggle,jdbcType=VARCHAR}, #{religion,jdbcType=VARCHAR}, 
+      #{explain,jdbcType=VARCHAR}, #{ip,jdbcType=VARCHAR}, #{delflg,jdbcType=INTEGER}, 
+      #{workunit,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="entity.view.PatInf" >
     insert into pat_inf
@@ -88,6 +108,9 @@
       </if>
       <if test="pid != null" >
         pID,
+      </if>
+      <if test="coupleid != null" >
+        coupleID,
       </if>
       <if test="createname != null" >
         createName,
@@ -116,8 +139,8 @@
       <if test="usedname != null" >
         usedName,
       </if>
-      <if test="nameabbrev != null" >
-        nameabbrev,
+      <if test="nameabbreviation != null" >
+        nameAbbreviation,
       </if>
       <if test="idnumber != null" >
         IDNumber,
@@ -131,11 +154,17 @@
       <if test="hongkongandmacaupassportnumber != null" >
         HongKongAndMacauPassportNumber,
       </if>
-      <if test="nativeplace != null" >
-        nativeplace,
+      <if test="nativeplace1 != null" >
+        nativeplace1,
+      </if>
+      <if test="nativeplace2 != null" >
+        nativeplace2,
       </if>
       <if test="birthdate != null" >
         birthDate,
+      </if>
+      <if test="age != null" >
+        age,
       </if>
       <if test="education != null" >
         education,
@@ -152,14 +181,38 @@
       <if test="phone != null" >
         phone,
       </if>
+      <if test="spousephone != null" >
+        spousePhone,
+      </if>
+      <if test="kin1 != null" >
+        kin1,
+      </if>
+      <if test="telnum1 != null" >
+        telNum1,
+      </if>
+      <if test="kin2 != null" >
+        kin2,
+      </if>
+      <if test="telnum2 != null" >
+        telNum2,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="residence != null" >
+        residence,
+      </if>
+      <if test="detailedaddress != null" >
+        detailedAddress,
+      </if>
       <if test="socialsecuritynum != null" >
         socialSecurityNum,
-      </if>
-      <if test="address != null" >
-        address,
-      </if>
-      <if test="liveaddress != null" >
-        liveaddress,
       </if>
       <if test="familyrelation != null" >
         familyRelation,
@@ -172,9 +225,6 @@
       </if>
       <if test="religion != null" >
         religion,
-      </if>
-      <if test="detailedaddress != null" >
-        detailedaddress,
       </if>
       <if test="explain != null" >
         explain,
@@ -195,6 +245,9 @@
       </if>
       <if test="pid != null" >
         #{pid,jdbcType=VARCHAR},
+      </if>
+      <if test="coupleid != null" >
+        #{coupleid,jdbcType=VARCHAR},
       </if>
       <if test="createname != null" >
         #{createname,jdbcType=VARCHAR},
@@ -223,8 +276,8 @@
       <if test="usedname != null" >
         #{usedname,jdbcType=VARCHAR},
       </if>
-      <if test="nameabbrev != null" >
-        #{nameabbrev,jdbcType=VARCHAR},
+      <if test="nameabbreviation != null" >
+        #{nameabbreviation,jdbcType=VARCHAR},
       </if>
       <if test="idnumber != null" >
         #{idnumber,jdbcType=VARCHAR},
@@ -238,11 +291,17 @@
       <if test="hongkongandmacaupassportnumber != null" >
         #{hongkongandmacaupassportnumber,jdbcType=VARCHAR},
       </if>
-      <if test="nativeplace != null" >
-        #{nativeplace,jdbcType=VARCHAR},
+      <if test="nativeplace1 != null" >
+        #{nativeplace1,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace2 != null" >
+        #{nativeplace2,jdbcType=VARCHAR},
       </if>
       <if test="birthdate != null" >
         #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
       </if>
       <if test="education != null" >
         #{education,jdbcType=VARCHAR},
@@ -259,14 +318,38 @@
       <if test="phone != null" >
         #{phone,jdbcType=VARCHAR},
       </if>
+      <if test="spousephone != null" >
+        #{spousephone,jdbcType=VARCHAR},
+      </if>
+      <if test="kin1 != null" >
+        #{kin1,jdbcType=VARCHAR},
+      </if>
+      <if test="telnum1 != null" >
+        #{telnum1,jdbcType=VARCHAR},
+      </if>
+      <if test="kin2 != null" >
+        #{kin2,jdbcType=VARCHAR},
+      </if>
+      <if test="telnum2 != null" >
+        #{telnum2,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="residence != null" >
+        #{residence,jdbcType=VARCHAR},
+      </if>
+      <if test="detailedaddress != null" >
+        #{detailedaddress,jdbcType=VARCHAR},
+      </if>
       <if test="socialsecuritynum != null" >
         #{socialsecuritynum,jdbcType=VARCHAR},
-      </if>
-      <if test="address != null" >
-        #{address,jdbcType=VARCHAR},
-      </if>
-      <if test="liveaddress != null" >
-        #{liveaddress,jdbcType=VARCHAR},
       </if>
       <if test="familyrelation != null" >
         #{familyrelation,jdbcType=VARCHAR},
@@ -279,9 +362,6 @@
       </if>
       <if test="religion != null" >
         #{religion,jdbcType=VARCHAR},
-      </if>
-      <if test="detailedaddress != null" >
-        #{detailedaddress,jdbcType=VARCHAR},
       </if>
       <if test="explain != null" >
         #{explain,jdbcType=VARCHAR},
@@ -299,14 +379,155 @@
   </insert>
   <select id="selectAll" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List"></include>
+    <include refid="Base_Column_List" />
     from pat_inf
     where delflg = 0
   </select>
   <select id="selectByName" parameterType="string" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List"></include>
+    <include refid="Base_Column_List" />
     from pat_inf
     where name like '%'||#{name}||'%' and delflg = 0
   </select>
+  <select id="selectByPid" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from pat_inf
+    where pID = #{pid} and delflg = 0
+  </select>
+  <update id="updateSelective" parameterType="entity.view.PatInf">
+    update pat_inf
+    <set>
+      <if test="coupleid != null" >
+        coupleId = #{coupleid,jdbcType=VARCHAR},
+      </if>
+      <if test="createname != null" >
+        createName = #{createname,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        updateTime = #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="updatename != null" >
+        updateName = #{updatename,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalcard != null" >
+        hospitalCard = #{hospitalcard,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null" >
+        nation = #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="usedname != null" >
+        usedName = #{usedname,jdbcType=VARCHAR},
+      </if>
+      <if test="nameabbreviation != null" >
+        nameAbbreviation = #{nameabbreviation,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        IDNumber = #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="officernumber != null" >
+        officerNumber = #{officernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="passportnumber != null" >
+        passportNumber = #{passportnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="hongkongandmacaupassportnumber != null" >
+        HongKongAndMacauPassportNumber = #{hongkongandmacaupassportnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace1 != null" >
+        nativeplace1 = #{nativeplace1,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace2 != null" >
+        nativeplace2 = #{nativeplace2,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        birthDate = #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="education != null" >
+        education = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="occupation != null" >
+        occupation = #{occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="weixin != null" >
+        weixin = #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="spousephone != null" >
+        spousePhone = #{spousephone,jdbcType=VARCHAR},
+      </if>
+      <if test="kin1 != null" >
+        kin1 = #{kin1,jdbcType=VARCHAR},
+      </if>
+      <if test="telnum1 != null" >
+        telNum1 = #{telnum1,jdbcType=VARCHAR},
+      </if>
+      <if test="kin2 != null" >
+        kin2 = #{kin2,jdbcType=VARCHAR},
+      </if>
+      <if test="telnum2 != null" >
+        telNum2 = #{telnum2,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="residence != null" >
+        residence = #{residence,jdbcType=VARCHAR},
+      </if>
+      <if test="detailedaddress != null" >
+        detailedAddress = #{detailedaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritynum != null" >
+        socialSecurityNum = #{socialsecuritynum,jdbcType=VARCHAR},
+      </if>
+      <if test="familyrelation != null" >
+        familyRelation = #{familyrelation,jdbcType=VARCHAR},
+      </if>
+      <if test="annualhouseincome != null" >
+        annualHouseIncome = #{annualhouseincome,jdbcType=VARCHAR},
+      </if>
+      <if test="religiontoggle != null" >
+        religionToggle = #{religiontoggle,jdbcType=VARCHAR},
+      </if>
+      <if test="religion != null" >
+        religion = #{religion,jdbcType=VARCHAR},
+      </if>
+      <if test="explain != null" >
+        explain = #{explain,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="delflg != null" >
+        delflg = #{delflg,jdbcType=INTEGER},
+      </if>
+      <if test="workunit != null" >
+        workUnit = #{workunit,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pID = #{pid,jdbcType=VARCHAR}
+  </update>
 </mapper>

@@ -12,4 +12,8 @@ public interface PatInfMapper {
     List<PatInf> selectAll();
 
     List<PatInf> selectByName(String name);
+
+    PatInf selectByPid(String pid);
+
+    int updateSelective(PatInf record);
 }

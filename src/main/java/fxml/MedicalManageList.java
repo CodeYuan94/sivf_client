@@ -95,11 +95,6 @@ public class MedicalManageList extends VBox implements Initializable {
         });
     }
 
-
-
-    String loginName = "王二";
-    String passWord = "123";
-
     @FXML
     public void toSearch(){
         System.out.println("spring-mybatis成功，输出：" );

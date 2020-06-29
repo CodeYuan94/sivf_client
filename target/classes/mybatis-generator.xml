@@ -15,7 +15,7 @@
 
 
         <!-- 连接数据库的信息 -->
-        <jdbcConnection connectionURL="jdbc:sqlite:D:/sivf/SIVF/ARMS.db?date_string_format=yyyy-MM-dd"
+        <jdbcConnection connectionURL="jdbc:sqlite:D:/IdeaProjects/sivf_client/ARMS.db?date_string_format=yyyy-MM-dd"
                         driverClass="org.sqlite.JDBC" password="" userId="">
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>

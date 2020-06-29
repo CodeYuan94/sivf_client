@@ -15,7 +15,7 @@
 
 
         <!-- 连接数据库的信息 -->
-        <jdbcConnection connectionURL="jdbc:sqlite:D:/sivf/SIVF/ARMS.db?date_string_format=yyyy-MM-dd"
+        <jdbcConnection connectionURL="jdbc:sqlite:D:/IdeaProjects/sivf_client/ARMS.db?date_string_format=yyyy-MM-dd"
                         driverClass="org.sqlite.JDBC" password="" userId="">
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
@@ -26,25 +26,30 @@
         <!-- mapper 接口 -->
         <javaClientGenerator targetPackage="dao" targetProject="src/main/java" type="XMLMAPPER"/>
 
-        <table tableName="pat_inf" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false">
-        </table>
-        <table tableName="people_record"
+        <table tableName="pat_inf"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false">
+               enableSelectByExample="false" selectByExampleQueryId="false"
+               enableUpdateByPrimaryKey="true" >
         </table>
-        <table tableName="reservation"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false">
-        </table>
-        <table tableName="login_user_info"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false">
-        </table>
+<!--        <table tableName="people_record"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false" selectByExampleQueryId="false"-->
+<!--               enableUpdateByPrimaryKey="true" >-->
+<!--        </table>-->
+<!--        <table tableName="reservation"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false" selectByExampleQueryId="false"-->
+<!--               enableUpdateByPrimaryKey="true" >-->
+<!--        </table>-->
+<!--        <table tableName="login_user_info"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false" selectByExampleQueryId="false"-->
+<!--               enableUpdateByPrimaryKey="true" >-->
+<!--        </table>-->
     </context>
 
 </generatorConfiguration>
